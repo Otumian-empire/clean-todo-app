@@ -1,0 +1,18 @@
+{
+  "name": "clean-todo-app",
+  "version": "1.0.0",
+  "description": "a simple todo-app with user and todos as entity to demo a clean arch",
+  "main": "scr/index.ts",
+  "author": "otumian-empire",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.3"
+  }
+}
