@@ -3,3 +3,4 @@ node_modules
 .editorconfig
 cspell.json
 yarn.lock
+**.sqlite
