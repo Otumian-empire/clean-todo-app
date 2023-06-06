@@ -1,11 +1,9 @@
-import Todo from "../../domain/todo";
-
-export class CreateTodo {
+export interface CreateTodo {
     title: string;
     body: string;
 }
 
-export class CreatedTodo {
+export interface CreatedTodo {
     id: number;
     title: string;
     body: string;
@@ -13,38 +11,28 @@ export class CreatedTodo {
     userId: number;
     createdAt: Date;
     updatedAt: Date;
-
-    constructor(todo: Todo) {
-        this.id = todo.id;
-        this.title = todo.title;
-        this.body = todo.body;
-        this.isDone = todo.isDone;
-        this.userId = todo.userId;
-        this.createdAt = todo.createdAt;
-        this.updatedAt = todo.updatedAt;
-    }
 }
 
-export class UpdateTitle {
+export interface UpdateTitle {
     id: number;
     title: string;
 }
 
-export class UpdateBody {
+export interface UpdateBody {
     id: number;
     body: string;
 }
 
-export class UpdateIsDone {
+export interface UpdateIsDone {
     id: number;
     isDone: boolean;
 }
 
-export class GetById {
+export interface GetById {
     id: number;
 }
 
-export class Filter {
-    limit: number = 10;
-    offset: number = 1;
+export interface Filter {
+    limit: number;
+    offset: number;
 }

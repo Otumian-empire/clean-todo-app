@@ -1,12 +1,10 @@
-import User from "../../domain/user";
-
-export class CreateUser {
+export interface CreateUser {
     email: string;
     username: string;
     password: string;
 }
 
-export class CreatedUser {
+export interface CreatedUser {
     id: number;
     email: string;
     username: string;
@@ -14,29 +12,19 @@ export class CreatedUser {
     isActive: boolean;
     createdAt: Date;
     updatedAt: Date;
-
-    constructor(user: User) {
-        this.id = user.id;
-        this.email = user.email;
-        this.username = user.username;
-        this.isVerified = user.isVerified;
-        this.isActive = user.isActive;
-        this.createdAt = user.createdAt;
-        this.updatedAt = user.updatedAt;
-    }
 }
 
-export class UpdatePassword {
+export interface UpdatePassword {
     id: number;
     password: string;
 }
 
-export class UpdateVerification {
+export interface UpdateVerification {
     id: number;
     isVerified: boolean;
 }
 
-export class UpdateActivation {
+export interface UpdateActivation {
     id: number;
     isActive: boolean;
 }
